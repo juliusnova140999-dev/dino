@@ -4,32 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO Meta Tags -->
   <title>Dino Desain - Kreatif & Lucu 🦖</title>
-  <meta name="description" content="Dino Desain: inspirasi desain kreatif dengan karakter dinosaurus lucu. Cocok untuk ilustrator dan penggemar dino.">
+  <meta name="description" content="Dino Desain: desain kreatif & lucu dengan karakter dinosaurus. Inspirasi untuk ilustrator & penggemar dino!">
   <meta name="keywords" content="desain, kreatif, dino, ilustrasi, lucu, website">
-  <link rel="canonical" href="https://juliusnova140999-dev.github.io/dino-desain/">
-
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Dino Desain - Kreatif & Lucu 🦖">
-  <meta property="og:description" content="Dino Desain, inspirasi desain kreatif dengan karakter dinosaurus lucu.">
-  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Dino+Desain">
-  <meta property="og:url" content="https://juliusnova140999-dev.github.io/dino-desain/">
-  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Favicon -->
   <link rel="icon" href="https://via.placeholder.com/32x32.png?text=🦖" type="image/png">
 
-  <!-- Google Analytics 4 -->
+  <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX'); // Ganti dengan GA4 ID asli
+    gtag('config', 'G-XXXXXXXXXX'); // ganti dengan GA4 ID asli
   </script>
 
-  <!-- Web Vitals Tracking -->
+  <!-- Web Vitals -->
   <script src="https://unpkg.com/web-vitals@2.1.0/dist/web-vitals.iife.js"></script>
   <script>
     function sendToGA({name, delta, id}) {
@@ -45,64 +36,131 @@
     webVitals.getLCP(sendToGA);
   </script>
 
-  <!-- CSS Minimal -->
+  <!-- CSS -->
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f5f5; color:#333; }
-    header { background:linear-gradient(90deg,#4CAF50,#8BC34A); color:white; text-align:center; padding:2rem; box-shadow:0 4px 6px rgba(0,0,0,0.1);}
-    header h1 { margin:0; font-size:2.5rem;}
-    main { max-width:1000px; margin:auto; padding:2rem;}
-    section { margin-bottom:3rem;}
-    h2 { font-size:1.8rem; margin-bottom:1rem;}
-    p { font-size:1rem; line-height:1.6;}
-    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1rem;}
-    .gallery img { width:100%; border-radius:12px; transition:transform 0.3s, box-shadow 0.3s; opacity:0; transform:translateY(20px);}
-    .gallery img:hover { transform:scale(1.05); box-shadow:0 10px 20px rgba(0,0,0,0.2);}
-    footer { text-align:center; padding:1rem; font-size:0.9rem; color:#666; border-top:1px solid #ddd;}
-    .fade-in { opacity:0; transform:translateY(20px); transition:opacity 0.8s, transform 0.8s;}
-    .fade-in.visible { opacity:1; transform:translateY(0);}
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+    body { font-family: 'Fredoka One', cursive; margin:0; padding:0; }
+
+    header {
+      background: linear-gradient(90deg,#FF6F61,#FFB347);
+      color:white; text-align:center; padding:3rem 1rem;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    }
+    header h1 { margin:0; font-size:2.8rem; animation: pop 0.8s ease-out; }
+    header p { margin-top:0.5rem; font-size:1.2rem; }
+
+    main { max-width:1200px; margin:auto; }
+
+    /* Section warna habitat */
+    .section-air { background:#D0F0FD; padding:2rem; border-radius:12px; margin:2rem 1rem; }
+    .section-darat { background:#FFE5D9; padding:2rem; border-radius:12px; margin:2rem 1rem; }
+    .section-udara { background:#FFEDCC; padding:2rem; border-radius:12px; margin:2rem 1rem; }
+
+    h2 { font-size:2rem; margin-bottom:1rem; color:#FF6F61; }
+    p { font-size:1rem; line-height:1.6; }
+
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem; }
+    .gallery img {
+      width:100%; border-radius:20px;
+      cursor:pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      opacity:0; transform:translateY(30px);
+    }
+    .gallery img:hover {
+      transform: scale(1.1) rotate(-3deg);
+      box-shadow:0 12px 24px rgba(0,0,0,0.25);
+    }
+
+    footer {
+      text-align:center; padding:1.5rem; font-size:0.9rem;
+      color:#666; border-top:2px solid #FFB347;
+      background:#F9F9F9;
+    }
+
+    .fade-in { opacity:0; transform:translateY(30px); transition:opacity 0.9s ease, transform 0.9s ease; }
+    .fade-in.visible { opacity:1; transform:translateY(0); }
+
+    @keyframes pop { 0%{transform:scale(0.5);} 100%{transform:scale(1);} }
   </style>
 </head>
 <body>
 
 <header>
   <h1>Dino Desain 🦖</h1>
-  <p>Inspirasi desain kreatif dan lucu untuk penggemar dinosaurus!</p>
+  <p>Desain kreatif & super lucu untuk penggemar dinosaurus!</p>
 </header>
 
 <main>
-  <section class="fade-in">
+  <!-- Tentang -->
+  <section class="fade-in section-darat">
     <h2>Tentang Dino Desain</h2>
-    <p>Dino Desain menghadirkan inspirasi desain lucu dan kreatif dengan karakter dinosaurus.</p>
-    <img src="https://via.placeholder.com/900x300.png?text=Dino+Banner" alt="Dino Banner" loading="lazy">
+    <p>Selamat datang di Dino Desain! 🦖 Tempat di mana dinosaurus menjadi lucu, kreatif, dan siap bikin kamu tersenyum 😆</p>
+    <p>Kami menyulap ide sederhana menjadi karya dinosaurus yang gokil abis! 🎨</p>
   </section>
 
-  <section class="fade-in">
-    <h2>Galeri Desain</h2>
+  <!-- Dino Air -->
+  <section class="fade-in section-air">
+    <h2>Dino Air 🌊</h2>
+    <p>Dino-dino ini jago berenang, tapi kadang lupa di mana kantong makanannya! 🌊🦖</p>
     <div class="gallery">
-      <img src="https://via.placeholder.com/250.png?text=Dino+1" alt="Dino 1" loading="lazy">
-      <img src="https://via.placeholder.com/250.png?text=Dino+2" alt="Dino 2" loading="lazy">
-      <img src="https://via.placeholder.com/250.png?text=Dino+3" alt="Dino 3" loading="lazy">
-      <img src="https://via.placeholder.com/250.png?text=Dino+4" alt="Dino 4" loading="lazy">
+      <img src="https://via.placeholder.com/250.png?text=Plesiosaurus" alt="Plesiosaurus">
+      <img src="https://via.placeholder.com/250.png?text=Mosasaurus" alt="Mosasaurus">
+      <img src="https://via.placeholder.com/250.png?text=Ichthyosaurus" alt="Ichthyosaurus">
+      <img src="https://via.placeholder.com/250.png?text=Dunkleosteus" alt="Dunkleosteus">
     </div>
+  </section>
+
+  <!-- Dino Darat -->
+  <section class="fade-in section-darat">
+    <h2>Dino Darat 🌿</h2>
+    <p>Dino-dino darat ini suka jalan-jalan santai, tapi hati-hati jangan diinjak ya! 😁</p>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/250.png?text=T-Rex" alt="T-Rex">
+      <img src="https://via.placeholder.com/250.png?text=Triceratops" alt="Triceratops">
+      <img src="https://via.placeholder.com/250.png?text=Stegosaurus" alt="Stegosaurus">
+      <img src="https://via.placeholder.com/250.png?text=Brachiosaurus" alt="Brachiosaurus">
+      <img src="https://via.placeholder.com/250.png?text=Ankylosaurus" alt="Ankylosaurus">
+    </div>
+  </section>
+
+  <!-- Dino Udara -->
+  <section class="fade-in section-udara">
+    <h2>Dino Udara ☁️</h2>
+    <p>Dino-dino ini suka terbang tinggi, kadang bikin selfie dari langit! ☁️🦖</p>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/250.png?text=Pteranodon" alt="Pteranodon">
+      <img src="https://via.placeholder.com/250.png?text=Quetzalcoatlus" alt="Quetzalcoatlus">
+      <img src="https://via.placeholder.com/250.png?text=Rhamphorhynchus" alt="Rhamphorhynchus">
+      <img src="https://via.placeholder.com/250.png?text=Dsungaripterus" alt="Dsungaripterus">
+    </div>
+  </section>
+
+  <!-- Tips Kreatif -->
+  <section class="fade-in section-darat">
+    <h2>Tips Kreatif 🎨</h2>
+    <p>Gunakan warna cerah untuk dinosaurusmu biar makin gokil! 🌈</p>
+    <p>Eksperimen bentuk unik, ekspresi lucu, dan latar kocak.</p>
+    <p>Tips ekstra: Tambahkan topi, kacamata, atau cupcake biar dinosaurus makin gemesin 🍰🦖</p>
   </section>
 </main>
 
 <footer class="fade-in">
-  &copy; 2025 Dino Desain. All rights reserved.
+  &copy; 2025 Dino Desain. Semua hak cipta dilindungi. 🦖💖
 </footer>
 
 <script>
-const faders=document.querySelectorAll('.fade-in');
-const appearOptions={threshold:0.1,rootMargin:"0px 0px -50px 0px"};
-const appearOnScroll=new IntersectionObserver((entries,observer)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = {threshold:0.1, rootMargin:"0px 0px -50px 0px"};
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
       entry.target.classList.add('visible');
       observer.unobserve(entry.target);
     }
   });
-},appearOptions);
-faders.forEach(fader=>appearOnScroll.observe(fader));
+}, appearOptions);
+faders.forEach(fader => appearOnScroll.observe(fader));
 </script>
 
 </body>
