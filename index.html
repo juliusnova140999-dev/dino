@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Dino Desain - Kreatif & Lucu 🦖</title>
+  <meta name="description" content="Dino Desain: inspirasi desain kreatif dengan karakter dinosaurus lucu. Cocok untuk ilustrator dan penggemar dino.">
+  <meta name="keywords" content="desain, kreatif, dino, ilustrasi, lucu, website">
+  <link rel="canonical" href="https://juliusnova140999-dev.github.io/dino-desain/">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Dino Desain - Kreatif & Lucu 🦖">
+  <meta property="og:description" content="Dino Desain, inspirasi desain kreatif dengan karakter dinosaurus lucu.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Dino+Desain">
+  <meta property="og:url" content="https://juliusnova140999-dev.github.io/dino-desain/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://via.placeholder.com/32x32.png?text=🦖" type="image/png">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX'); // Ganti dengan GA4 ID asli
+  </script>
+
+  <!-- Web Vitals Tracking -->
+  <script src="https://unpkg.com/web-vitals@2.1.0/dist/web-vitals.iife.js"></script>
+  <script>
+    function sendToGA({name, delta, id}) {
+      gtag('event', name, {
+        event_category: 'Web Vitals',
+        value: Math.round(name === 'CLS' ? delta * 1000 : delta),
+        event_label: id,
+        non_interaction: true,
+      });
+    }
+    webVitals.getCLS(sendToGA);
+    webVitals.getFID(sendToGA);
+    webVitals.getLCP(sendToGA);
+  </script>
+
+  <!-- CSS Minimal -->
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f5f5; color:#333; }
+    header { background:linear-gradient(90deg,#4CAF50,#8BC34A); color:white; text-align:center; padding:2rem; box-shadow:0 4px 6px rgba(0,0,0,0.1);}
+    header h1 { margin:0; font-size:2.5rem;}
+    main { max-width:1000px; margin:auto; padding:2rem;}
+    section { margin-bottom:3rem;}
+    h2 { font-size:1.8rem; margin-bottom:1rem;}
+    p { font-size:1rem; line-height:1.6;}
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1rem;}
+    .gallery img { width:100%; border-radius:12px; transition:transform 0.3s, box-shadow 0.3s; opacity:0; transform:translateY(20px);}
+    .gallery img:hover { transform:scale(1.05); box-shadow:0 10px 20px rgba(0,0,0,0.2);}
+    footer { text-align:center; padding:1rem; font-size:0.9rem; color:#666; border-top:1px solid #ddd;}
+    .fade-in { opacity:0; transform:translateY(20px); transition:opacity 0.8s, transform 0.8s;}
+    .fade-in.visible { opacity:1; transform:translateY(0);}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Dino Desain 🦖</h1>
+  <p>Inspirasi desain kreatif dan lucu untuk penggemar dinosaurus!</p>
+</header>
+
+<main>
+  <section class="fade-in">
+    <h2>Tentang Dino Desain</h2>
+    <p>Dino Desain menghadirkan inspirasi desain lucu dan kreatif dengan karakter dinosaurus.</p>
+    <img src="https://via.placeholder.com/900x300.png?text=Dino+Banner" alt="Dino Banner" loading="lazy">
+  </section>
+
+  <section class="fade-in">
+    <h2>Galeri Desain</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/250.png?text=Dino+1" alt="Dino 1" loading="lazy">
+      <img src="https://via.placeholder.com/250.png?text=Dino+2" alt="Dino 2" loading="lazy">
+      <img src="https://via.placeholder.com/250.png?text=Dino+3" alt="Dino 3" loading="lazy">
+      <img src="https://via.placeholder.com/250.png?text=Dino+4" alt="Dino 4" loading="lazy">
+    </div>
+  </section>
+</main>
+
+<footer class="fade-in">
+  &copy; 2025 Dino Desain. All rights reserved.
+</footer>
+
+<script>
+const faders=document.querySelectorAll('.fade-in');
+const appearOptions={threshold:0.1,rootMargin:"0px 0px -50px 0px"};
+const appearOnScroll=new IntersectionObserver((entries,observer)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+},appearOptions);
+faders.forEach(fader=>appearOnScroll.observe(fader));
+</script>
+
+</body>
+</html>
