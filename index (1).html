@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dino Desain - Kreatif & Lucu 🦖</title>
+  <meta name="description" content="Dino Desain: desain kreatif & lucu dengan karakter dinosaurus. Inspirasi untuk ilustrator & penggemar dino!">
+  <meta name="keywords" content="desain, kreatif, dino, ilustrasi, lucu, website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://via.placeholder.com/32x32.png?text=🦖" type="image/png">
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX'); // ganti dengan GA4 ID asli
+  </script>
+
+  <!-- Web Vitals -->
+  <script src="https://unpkg.com/web-vitals@2.1.0/dist/web-vitals.iife.js"></script>
+  <script>
+    function sendToGA({name, delta, id}) {
+      gtag('event', name, {
+        event_category: 'Web Vitals',
+        value: Math.round(name === 'CLS' ? delta * 1000 : delta),
+        event_label: id,
+        non_interaction: true,
+      });
+    }
+    webVitals.getCLS(sendToGA);
+    webVitals.getFID(sendToGA);
+    webVitals.getLCP(sendToGA);
+  </script>
+
+  <!-- CSS -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+    body { font-family: 'Fredoka One', cursive; margin:0; padding:0; }
+
+    header {
+      background: linear-gradient(90deg,#FF6F61,#FFB347);
+      color:white; text-align:center; padding:3rem 1rem;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    }
+    header h1 { margin:0; font-size:2.8rem; animation: pop 0.8s ease-out; }
+    header p { margin-top:0.5rem; font-size:1.2rem; }
+
+    main { max-width:1200px; margin:auto; }
+
+    /* Section warna habitat */
+    .section-air { background:#D0F0FD; padding:2rem; border-radius:12px; margin:2rem 1rem; }
+    .section-darat { background:#FFE5D9; padding:2rem; border-radius:12px; margin:2rem 1rem; }
+    .section-udara { background:#FFEDCC; padding:2rem; border-radius:12px; margin:2rem 1rem; }
+
+    h2 { font-size:2rem; margin-bottom:1rem; color:#FF6F61; }
+    p { font-size:1rem; line-height:1.6; }
+
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem; }
+    .gallery img {
+      width:100%; border-radius:20px;
+      cursor:pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      opacity:0; transform:translateY(30px);
+    }
+    .gallery img:hover {
+      transform: scale(1.1) rotate(-3deg);
+      box-shadow:0 12px 24px rgba(0,0,0,0.25);
+    }
+
+    footer {
+      text-align:center; padding:1.5rem; font-size:0.9rem;
+      color:#666; border-top:2px solid #FFB347;
+      background:#F9F9F9;
+    }
+
+    .fade-in { opacity:0; transform:translateY(30px); transition:opacity 0.9s ease, transform 0.9s ease; }
+    .fade-in.visible { opacity:1; transform:translateY(0); }
+
+    @keyframes pop { 0%{transform:scale(0.5);} 100%{transform:scale(1);} }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Dino Desain 🦖</h1>
+  <p>Desain kreatif & super lucu untuk penggemar dinosaurus!</p>
+</header>
+
+<main>
+  <!-- Tentang -->
+  <section class="fade-in section-darat">
+    <h2>Tentang Dino Desain</h2>
+    <p>Selamat datang di Dino Desain! 🦖 Tempat di mana dinosaurus menjadi lucu, kreatif, dan siap bikin kamu tersenyum 😆</p>
+    <p>Kami menyulap ide sederhana menjadi karya dinosaurus yang gokil abis! 🎨</p>
+  </section>
+
+  <!-- Dino Air -->
+  <section class="fade-in section-air">
+    <h2>Dino Air 🌊</h2>
+    <p>Dino-dino ini jago berenang, tapi kadang lupa di mana kantong makanannya! 🌊🦖</p>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/250.png?text=Plesiosaurus" alt="Plesiosaurus">
+      <img src="https://via.placeholder.com/250.png?text=Mosasaurus" alt="Mosasaurus">
+      <img src="https://via.placeholder.com/250.png?text=Ichthyosaurus" alt="Ichthyosaurus">
+      <img src="https://via.placeholder.com/250.png?text=Dunkleosteus" alt="Dunkleosteus">
+    </div>
+  </section>
+
+  <!-- Dino Darat -->
+  <section class="fade-in section-darat">
+    <h2>Dino Darat 🌿</h2>
+    <p>Dino-dino darat ini suka jalan-jalan santai, tapi hati-hati jangan diinjak ya! 😁</p>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/250.png?text=T-Rex" alt="T-Rex">
+      <img src="https://via.placeholder.com/250.png?text=Triceratops" alt="Triceratops">
+      <img src="https://via.placeholder.com/250.png?text=Stegosaurus" alt="Stegosaurus">
+      <img src="https://via.placeholder.com/250.png?text=Brachiosaurus" alt="Brachiosaurus">
+      <img src="https://via.placeholder.com/250.png?text=Ankylosaurus" alt="Ankylosaurus">
+    </div>
+  </section>
+
+  <!-- Dino Udara -->
+  <section class="fade-in section-udara">
+    <h2>Dino Udara ☁️</h2>
+    <p>Dino-dino ini suka terbang tinggi, kadang bikin selfie dari langit! ☁️🦖</p>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/250.png?text=Pteranodon" alt="Pteranodon">
+      <img src="https://via.placeholder.com/250.png?text=Quetzalcoatlus" alt="Quetzalcoatlus">
+      <img src="https://via.placeholder.com/250.png?text=Rhamphorhynchus" alt="Rhamphorhynchus">
+      <img src="https://via.placeholder.com/250.png?text=Dsungaripterus" alt="Dsungaripterus">
+    </div>
+  </section>
+
+  <!-- Tips Kreatif -->
+  <section class="fade-in section-darat">
+    <h2>Tips Kreatif 🎨</h2>
+    <p>Gunakan warna cerah untuk dinosaurusmu biar makin gokil! 🌈</p>
+    <p>Eksperimen bentuk unik, ekspresi lucu, dan latar kocak.</p>
+    <p>Tips ekstra: Tambahkan topi, kacamata, atau cupcake biar dinosaurus makin gemesin 🍰🦖</p>
+  </section>
+</main>
+
+<footer class="fade-in">
+  &copy; 2025 Dino Desain. Semua hak cipta dilindungi. 🦖💖
+</footer>
+
+<script>
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = {threshold:0.1, rootMargin:"0px 0px -50px 0px"};
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, appearOptions);
+faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
+
+</body>
+</html>
